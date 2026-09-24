@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "@fontsource/instrument-serif/400-italic.css";
+@import "@fontsource/instrument-serif/400.css";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/jetbrains-mono/400.css";
+
+@theme {
+  --color-paper: #F9F8F6;
+  --color-ink: #111110;
+  --color-hairline: #E5E3DD;
+  --color-accent: #8B1E1E;
+
+  --color-dark-paper: #0D0E11;
+  --color-dark-ink: #F9F8F6;
+  --color-dark-hairline: #333333;
+  --color-dark-accent: #142834;
+
+  --font-serif: "Instrument Serif", serif;
+  --font-sans: "Geist Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased selection:bg-accent selection:text-white dark:bg-dark-paper dark:text-dark-ink;
+  }
+}

@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Personal Engineering Publication & Architecture Portfolio of Charles Leung" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-paper text-ink dark:bg-dark-paper dark:text-dark-ink font-sans selection:bg-accent selection:text-white antialiased transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-hairline dark:border-dark-hairline min-h-screen relative shadow-[0_0_40px_rgba(0,0,0,0.03)]">
+      <slot />
+    </div>
+  </body>
+</html>
