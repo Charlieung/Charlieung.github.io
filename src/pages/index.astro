@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Charles Leung | Engineering Manager & Distributed Systems">
+  <main class="py-12 md:py-24">
+    {/* Folio Header */}
+    <header class="flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-16 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
+      <div class="flex flex-col gap-1">
+        <span class="font-bold text-accent">Vol. IV — NYC</span>
+        <span class="text-neutral-500">Edition</span>
+      </div>
+      <div class="flex flex-col gap-1 text-right">
+        <span class="font-bold">New York, NY</span>
+        <span class="text-neutral-500">Location</span>
+      </div>
+      <div class="hidden md:flex flex-col gap-1 text-right">
+        <span class="font-bold">Applied AI, Orchestration, Distributed Systems</span>
+        <span class="text-neutral-500">Focus</span>
+      </div>
+    </header>
+
+    {/* Masthead & Opening Manifesto */}
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-24 lg:mb-32">
+      <div class="md:col-span-8 lg:col-span-9 flex flex-col justify-center">
+        <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
+          Systems thinking as management.<br/>
+          <span class="text-accent italic">Probabilistic AI tamed by deterministic engineering.</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-medium max-w-3xl leading-snug">
+          I'm an AI Engineering Manager and former Founding Data Engineer. I build robust data platforms and scale production ML systems, turning chaotic models into reliable infrastructure.
+        </p>
+      </div>
+
+      {/* Executive Proofline / Marginalia */}
+      <aside class="md:col-span-4 lg:col-span-3 border-l border-hairline dark:border-dark-hairline pl-6 md:pl-8 py-2">
+        <div class="space-y-8 text-sm font-sans">
+          <div>
+            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+              Track Record
+            </h3>
+            <p class="leading-relaxed">
+              <strong>11 years</strong> building distributed data platforms and production machine learning systems.
+            </p>
+          </div>
+          <div class="h-px w-full bg-hairline dark:bg-dark-hairline"></div>
+          <div>
+            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2">Pedigree</h3>
+            <p class="leading-relaxed">
+              Carnegie Mellon dual-degree in <em>Chemical Engineering</em> & <em>Technical Writing</em>.
+            </p>
+          </div>
+          <div class="h-px w-full bg-hairline dark:bg-dark-hairline"></div>
+          <div>
+            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2">Outcome</h3>
+            <p class="leading-relaxed">
+              Scaled EvolutionIQ's core systems from zero to hundreds of millions in enterprise value through a <strong>$730M acquisition</strong>.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    {/* Section 2: Architectural Deep Dives ("The Ledger") */}
+    <section class="mb-24 lg:mb-32">
+      <div class="flex items-baseline gap-4 mb-12 border-b-2 border-ink dark:border-dark-ink pb-4">
+        <h2 class="font-serif text-4xl md:text-5xl">The Ledger</h2>
+        <span class="font-mono text-sm text-neutral-500 hidden md:inline-block">Architectural Case Studies & Post-Mortems</span>
+      </div>
+
+      <div class="space-y-16">
+        {/* Case Study 1 */}
+        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+          <div class="md:col-span-4 lg:col-span-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">I. EvolutionIQ</span>
+            <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">The 0-to-1 Scale & The $730M Exit</h3>
+          </div>
+          <div class="md:col-span-8 lg:col-span-9 font-sans text-base md:text-lg leading-relaxed space-y-6">
+            <p>
+              As the Founding Data Engineer, I built greenfield data and ML infrastructure from 0-to-1 for the Workers' Compensation vertical, scaling the architecture through company growth leading to a <strong>$730M acquisition by CCC Intelligent Solutions</strong>.
+            </p>
+            <div class="bg-neutral-100 dark:bg-neutral-900 p-6 md:p-8 border-l-4 border-accent relative">
+              <span class="absolute top-0 right-0 p-4 font-mono text-xs text-neutral-400">Architectural Note</span>
+              <p class="font-mono text-sm leading-relaxed mb-4 text-ink dark:text-dark-ink">
+                <strong>Problem:</strong> Batch pipelines scaling poorly. End-to-end latency was unacceptable.<br/>
+                <strong>Solution:</strong> Redesigned batch processing infrastructure using Change Data Capture (CDC) patterns and tuned Kubernetes resource allocation on GCP.<br/>
+                <strong>Result:</strong> Cut end-to-end data processing latency by <strong>96%</strong> (from 7 hours down to 16 minutes).
+              </p>
+              <p class="font-mono text-sm leading-relaxed text-ink dark:text-dark-ink">
+                Implemented centralized feature store and ML pipeline architecture with Dagster and BigQuery, increasing feature experimentation velocity and model iteration speed by 80%.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="w-full h-px bg-hairline dark:bg-dark-hairline"></div>
+
+        {/* Case Study 2 */}
+        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+          <div class="md:col-span-4 lg:col-span-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">II. Inference</span>
+            <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">Small-Model R&D vs. Token Economics</h3>
+          </div>
+          <div class="md:col-span-8 lg:col-span-9 font-sans text-base md:text-lg leading-relaxed space-y-6">
+            <p>
+              To navigate the trade-offs of using commercial frontier LLMs for claim extraction at scale, I led R&D efforts focusing on small, local models. The goal was to match commercial extraction benchmarks while ensuring robust token economics.
+            </p>
+            <p>
+              We successfully utilized quantized <strong>Gemma</strong> and partnered with platform engineering to self-host inference in production using <strong>vLLM</strong>. This move drastically improved cost predictability, reduced tail latency, and significantly bolstered carrier data security by keeping PII strictly in-house, cutting token expenditure across key carrier accounts.
+            </p>
+          </div>
+        </article>
+
+        <div class="w-full h-px bg-hairline dark:bg-dark-hairline"></div>
+
+        {/* Case Study 3 */}
+        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+          <div class="md:col-span-4 lg:col-span-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">III. Operations</span>
+            <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">Engineering Management as a System</h3>
+          </div>
+          <div class="md:col-span-8 lg:col-span-9 font-sans text-base md:text-lg leading-relaxed space-y-6">
+            <p>
+              Management is fundamentally an orchestration problem. I applied systems thinking to team operations, building deterministic evaluation harnesses and ground-truth validation pipelines for LLM document extraction.
+            </p>
+            <p>
+              By managing annotator pools and focusing on experiment design (sampling strategies, inter-annotator agreement metrics), I implemented cross-functional gating that drove team velocity and reliable delivery across 26 enterprise product modules.
+            </p>
+            <blockquote class="border-l-2 border-accent pl-6 py-2 my-8 italic font-serif text-2xl md:text-3xl text-neutral-700 dark:text-neutral-300">
+              "Built an internal agentic manager tool (LangGraph + Vertex AI) that parses GitHub, Jira, and Slack activity into calibrated performance review packets."
+            </blockquote>
+            <p>
+              This tool cut year-end review preparation from multi-day crunches to <strong>3 hours</strong>, proving so effective it was adopted by numerous peer engineering managers.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    {/* Section 3: The Mechanical Index (Chronology & Pedigree) */}
+    <section class="mb-24 lg:mb-32">
+      <div class="flex items-baseline gap-4 mb-12 border-b-2 border-ink dark:border-dark-ink pb-4">
+        <h2 class="font-serif text-4xl md:text-5xl">The Mechanical Index</h2>
+        <span class="font-mono text-sm text-neutral-500 hidden md:inline-block">Chronology & Pedigree</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+        {/* Career Chronology */}
+        <div>
+          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-8 border-b border-hairline dark:border-dark-hairline pb-2">Professional Experience</h3>
+          <ul class="space-y-6 font-sans text-sm md:text-base">
+            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+              <div>
+                <strong class="block">EvolutionIQ (CCC Intelligent Solutions)</strong>
+                <span class="text-neutral-600 dark:text-neutral-400">Eng. Manager, Applied AI & Data / Founding Data Eng.</span>
+              </div>
+              <span class="font-mono text-xs text-neutral-500">2021—Pres.</span>
+            </li>
+            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+              <div>
+                <strong class="block">Tradeweb Markets</strong>
+                <span class="text-neutral-600 dark:text-neutral-400">Data Platform Engineer</span>
+              </div>
+              <span class="font-mono text-xs text-neutral-500">2020—2021</span>
+            </li>
+            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+              <div>
+                <strong class="block">Barclays Investment Bank</strong>
+                <span class="text-neutral-600 dark:text-neutral-400">Quantitative Equity Developer</span>
+              </div>
+              <span class="font-mono text-xs text-neutral-500">2018—2020</span>
+            </li>
+            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+              <div>
+                <strong class="block">Société Générale CIB</strong>
+                <span class="text-neutral-600 dark:text-neutral-400">Rapid Application Developer</span>
+              </div>
+              <span class="font-mono text-xs text-neutral-500">2017—2018</span>
+            </li>
+            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+              <div>
+                <strong class="block">EVRAZ Inc. NA</strong>
+                <span class="text-neutral-600 dark:text-neutral-400">Steelmaking Process Engineer</span>
+              </div>
+              <span class="font-mono text-xs text-neutral-500">2013—2016</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Education & Pedigree */}
+        <div>
+          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-8 border-b border-hairline dark:border-dark-hairline pb-2">Academic Foundation</h3>
+          <div class="space-y-6 font-sans text-sm md:text-base">
+            <div>
+              <strong class="block text-lg mb-1">Carnegie Mellon University</strong>
+              <div class="space-y-1 text-neutral-600 dark:text-neutral-400">
+                <p>B.S. Chemical Engineering</p>
+                <p>B.S. Technical Writing</p>
+              </div>
+            </div>
+
+            <div class="bg-neutral-100 dark:bg-neutral-900 p-6 mt-8">
+              <p class="italic text-sm leading-relaxed">
+                <span class="font-bold text-accent not-italic">Synthesis:</span> The rigorous discipline of chemical process control loops combined with the clarity of technical writing fundamentally informs my approach to software orchestration, system observability, and engineering documentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section 4: Colophon & Dispatch */}
+    <footer class="border-t-2 border-ink dark:border-dark-ink pt-12 pb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-8 lg:col-span-9">
+        <h2 class="font-serif text-3xl md:text-5xl mb-6">Dispatch</h2>
+        <p class="font-sans text-lg md:text-xl max-w-2xl mb-8">
+          Always open to discussing distributed systems, orchestration, and the reality of taking AI out of the notebook and into production.
+        </p>
+        <div class="flex flex-wrap gap-4 font-mono text-sm">
+          <a href="mailto:leung.charles@outlook.com" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
+            leung.charles@outlook.com
+          </a>
+          <a href="https://linkedin.com/in/charles-leung" target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
+            LinkedIn
+          </a>
+          <a href="https://github.com/charlieung" target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 lg:col-span-3 text-sm font-sans flex flex-col justify-end mt-12 md:mt-0">
+        <div class="bg-neutral-100 dark:bg-neutral-900 p-6">
+          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-4 border-b border-hairline dark:border-dark-hairline pb-2">Colophon</h3>
+          <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+            <li><strong>Type:</strong> Instrument Serif, Geist Sans, JetBrains Mono</li>
+            <li><strong>Stack:</strong> Astro, Tailwind CSS, React</li>
+            <li><strong>Design:</strong> The Technical Magazine Spread</li>
+            <li class="mt-4 pt-4 border-t border-hairline dark:border-dark-hairline">
+              &copy; {new Date().getFullYear()} Charles Leung
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
