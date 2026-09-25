@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Charles Leung | Engineering Manager & Distributed Systems">
   <main class="py-12 md:py-24">
     {/* Folio Header */}
-    <header class="flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-16 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
+    <header class="reveal flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-16 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
       <div class="flex flex-col gap-1">
         <span class="font-bold text-accent">Vol. IV — NYC</span>
         <span class="text-neutral-500">Edition</span>
@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     {/* Masthead & Opening Manifesto */}
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-24 lg:mb-32">
+    <section class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-24 lg:mb-32">
       <div class="md:col-span-8 lg:col-span-9 flex flex-col justify-center">
         <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
           Systems thinking as management.<br/>
@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       {/* Executive Proofline / Marginalia */}
-      <aside class="md:col-span-4 lg:col-span-3 border-l border-hairline dark:border-dark-hairline pl-6 md:pl-8 py-2">
+      <aside class="md:col-span-4 lg:col-span-3 border-l border-hairline dark:border-dark-hairline pl-6 md:pl-8 py-2 md:sticky md:top-8 md:self-start">
         <div class="space-y-8 text-sm font-sans">
           <div>
             <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2 flex items-center gap-2">
@@ -63,7 +63,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     {/* Section 2: Architectural Deep Dives ("The Ledger") */}
-    <section class="mb-24 lg:mb-32">
+    <section class="reveal mb-24 lg:mb-32">
       <div class="flex items-baseline gap-4 mb-12 border-b-2 border-ink dark:border-dark-ink pb-4">
         <h2 class="font-serif text-4xl md:text-5xl">The Ledger</h2>
         <span class="font-mono text-sm text-neutral-500 hidden md:inline-block">Architectural Case Studies & Post-Mortems</span>
@@ -71,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="space-y-16">
         {/* Case Study 1 */}
-        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+        <article class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
           <div class="md:col-span-4 lg:col-span-3">
             <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">I. EvolutionIQ</span>
             <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">The 0-to-1 Scale & The $730M Exit</h3>
@@ -97,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="w-full h-px bg-hairline dark:bg-dark-hairline"></div>
 
         {/* Case Study 2 */}
-        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+        <article class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
           <div class="md:col-span-4 lg:col-span-3">
             <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">II. Inference</span>
             <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">Small-Model R&D vs. Token Economics</h3>
@@ -115,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="w-full h-px bg-hairline dark:bg-dark-hairline"></div>
 
         {/* Case Study 3 */}
-        <article class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+        <article class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
           <div class="md:col-span-4 lg:col-span-3">
             <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">III. Operations</span>
             <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">Engineering Management as a System</h3>
@@ -140,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     {/* Section 3: The Mechanical Index (Chronology & Pedigree) */}
-    <section class="mb-24 lg:mb-32">
+    <section class="reveal mb-24 lg:mb-32">
       <div class="flex items-baseline gap-4 mb-12 border-b-2 border-ink dark:border-dark-ink pb-4">
         <h2 class="font-serif text-4xl md:text-5xl">The Mechanical Index</h2>
         <span class="font-mono text-sm text-neutral-500 hidden md:inline-block">Chronology & Pedigree</span>
@@ -151,40 +151,40 @@ import Layout from '../layouts/Layout.astro';
         <div>
           <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-8 border-b border-hairline dark:border-dark-hairline pb-2">Professional Experience</h3>
           <ul class="space-y-6 font-sans text-sm md:text-base">
-            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+            <li class="flex justify-between items-baseline gap-4 border-b border-hairline/30 dark:border-dark-hairline/30 pb-2">
               <div>
                 <strong class="block">EvolutionIQ (CCC Intelligent Solutions)</strong>
                 <span class="text-neutral-600 dark:text-neutral-400">Eng. Manager, Applied AI & Data / Founding Data Eng.</span>
               </div>
-              <span class="font-mono text-xs text-neutral-500">2021—Pres.</span>
+              <span class="font-mono text-xs text-neutral-500 text-right shrink-0">2021—Pres.</span>
             </li>
-            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+            <li class="flex justify-between items-baseline gap-4 border-b border-hairline/30 dark:border-dark-hairline/30 pb-2">
               <div>
                 <strong class="block">Tradeweb Markets</strong>
                 <span class="text-neutral-600 dark:text-neutral-400">Data Platform Engineer</span>
               </div>
-              <span class="font-mono text-xs text-neutral-500">2020—2021</span>
+              <span class="font-mono text-xs text-neutral-500 text-right shrink-0">2020—2021</span>
             </li>
-            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+            <li class="flex justify-between items-baseline gap-4 border-b border-hairline/30 dark:border-dark-hairline/30 pb-2">
               <div>
                 <strong class="block">Barclays Investment Bank</strong>
                 <span class="text-neutral-600 dark:text-neutral-400">Quantitative Equity Developer</span>
               </div>
-              <span class="font-mono text-xs text-neutral-500">2018—2020</span>
+              <span class="font-mono text-xs text-neutral-500 text-right shrink-0">2018—2020</span>
             </li>
-            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+            <li class="flex justify-between items-baseline gap-4 border-b border-hairline/30 dark:border-dark-hairline/30 pb-2">
               <div>
                 <strong class="block">Société Générale CIB</strong>
                 <span class="text-neutral-600 dark:text-neutral-400">Rapid Application Developer</span>
               </div>
-              <span class="font-mono text-xs text-neutral-500">2017—2018</span>
+              <span class="font-mono text-xs text-neutral-500 text-right shrink-0">2017—2018</span>
             </li>
-            <li class="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+            <li class="flex justify-between items-baseline gap-4 pb-2">
               <div>
                 <strong class="block">EVRAZ Inc. NA</strong>
                 <span class="text-neutral-600 dark:text-neutral-400">Steelmaking Process Engineer</span>
               </div>
-              <span class="font-mono text-xs text-neutral-500">2013—2016</span>
+              <span class="font-mono text-xs text-neutral-500 text-right shrink-0">2013—2016</span>
             </li>
           </ul>
         </div>
@@ -212,7 +212,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     {/* Section 4: Colophon & Dispatch */}
-    <footer class="border-t-2 border-ink dark:border-dark-ink pt-12 pb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+    <footer class="reveal border-t-2 border-ink dark:border-dark-ink pt-12 pb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
       <div class="md:col-span-8 lg:col-span-9">
         <h2 class="font-serif text-3xl md:text-5xl mb-6">Dispatch</h2>
         <p class="font-sans text-lg md:text-xl max-w-2xl mb-8">
@@ -248,3 +248,28 @@ import Layout from '../layouts/Layout.astro';
 
   </main>
 </Layout>
+
+<script>
+  // Simple Intersection Observer to trigger reveal animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Stop observing once revealed
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Apply to all elements with the reveal class
+  document.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+  });
+</script>
