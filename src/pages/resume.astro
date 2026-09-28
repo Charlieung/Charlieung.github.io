@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Content as Profile } from '../content/sections/opening.md';
+import { frontmatter as resume } from '../content/sections/resume.md';
+import { frontmatter as experience } from '../content/sections/mechanical-index.md';
+import { frontmatter as contact } from '../content/sections/dispatch.md';
+
+---
+
+<Layout title="Charles Leung | Resume" description="Resume of Charles Leung, engineering manager focused on applied AI, product delivery, and growing teams.">
+  <main class="resume mx-auto max-w-4xl py-10 md:py-16">
+    <nav class="resume-actions flex flex-wrap items-center gap-3 mb-12 font-mono text-sm" aria-label="Resume actions">
+      <a href="/" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:text-accent">Back to site</a>
+      <button id="print-resume" type="button" class="border border-hairline dark:border-dark-hairline px-4 py-2 cursor-pointer hover:text-accent">Print / save PDF</button>
+    </nav>
+
+    <header class="border-b-2 border-ink dark:border-dark-ink pb-8">
+      <h1 class="font-serif text-5xl md:text-6xl leading-tight">Charles Leung</h1>
+      <p class="text-lg mt-2">{resume.role}</p>
+      <address class="not-italic mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <span>New York, NY</span>
+        <a class="underline underline-offset-4" href={`mailto:${contact.email}`}>{contact.email}</a>
+        <a class="underline underline-offset-4" href={contact.linkedin}>LinkedIn</a>
+        <a class="underline underline-offset-4" href={contact.github}>GitHub</a>
+      </address>
+    </header>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-3xl mb-4">Profile</h2>
+      <div class="leading-relaxed max-w-3xl"><Profile /></div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-serif text-3xl mb-4">Experience</h2>
+      <ol class="space-y-8">
+        {experience.experience.map((job: { company: string; role: string; dates: string }, index: number) => (
+          <li class="border-t border-hairline dark:border-dark-hairline pt-4 break-inside-avoid">
+            <div class="flex flex-wrap justify-between gap-x-4 gap-y-1">
+              <h3 class="font-semibold text-lg">{job.company}</h3>
+              <span class="font-mono text-sm">{job.dates}</span>
+            </div>
+            <p class="text-neutral-600 dark:text-neutral-400">{job.role}</p>
+            {index === 0 && (
+              <ul class="list-disc pl-5 mt-3 space-y-2 leading-relaxed">
+                {resume.highlights.map((highlight: string) => <li>{highlight}</li>)}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mt-10 border-t border-hairline dark:border-dark-hairline pt-5 break-inside-avoid">
+      <h2 class="font-serif text-3xl mb-3">Education</h2>
+      <h3 class="font-semibold">{experience.university}</h3>
+      <ul class="mt-1 text-neutral-600 dark:text-neutral-400">
+        {experience.degrees.map((degree: string) => <li>{degree}</li>)}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  document.querySelector('#print-resume')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  @media print {
+    @page { size: letter; margin: 0.65in; }
+    :global(body) { background: white !important; color: black !important; }
+    :global(body > div) { max-width: none; border: 0; box-shadow: none; padding: 0; }
+    .resume { max-width: none; padding: 0; }
+    .resume-actions { display: none; }
+    a { color: inherit; }
+  }
+</style>

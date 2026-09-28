@@ -40,3 +40,18 @@
     transform: translateY(0);
   }
 }
+
+.case-body > p + p,
+.case-body > p + blockquote,
+.case-body > blockquote + p {
+  margin-top: 1.5rem;
+}
+
+.synthesis strong {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+@media print {
+  body { background: white !important; color: black !important; }
+}

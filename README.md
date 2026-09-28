@@ -1,46 +1,26 @@
-# Astro Starter Kit: Basics
+# Charles Leung Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+The homepage is built with Astro. Edit copy in `src/content/sections/`:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| File | Content |
+| --- | --- |
+| `opening.md` | Headline, introduction, and sidebar proof points |
+| `ledger.md` | Case study section heading |
+| `ledger/*.md` | Individual case studies and architectural notes |
+| `mechanical-index.md` | Work history, education, and synthesis |
+| `dispatch.md` | Closing text and contact links |
+| `resume.md` | Highlights for the printable resume page |
 
-## 🚀 Project Structure
+Edit headings, lists, and links in each file's YAML frontmatter (between the
+`---` lines). Edit paragraphs below the frontmatter in Markdown. Keep the layout
+and section order in `src/pages/index.astro`; Markdown styling lives in
+`src/styles/global.css`.
 
-Inside of your Astro project, you'll see the following folders and files:
+The HTML resume is at `/resume/`. It uses the same work history and contact
+details as the homepage. To offer a downloadable original, add your own PDF at
+`public/resume.pdf` and link to `/resume.pdf` from the resume page. Review the
+PDF for private details before publishing it. Do not link to an external file
+that might expire or require sign-in.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Requires Node.js 22.12 or newer. Run `npm ci`, then `npm run dev` to preview or
+`npm run build` to create the static site.
