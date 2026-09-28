@@ -15,7 +15,7 @@
   --color-dark-paper: #0D0E11;
   --color-dark-ink: #F9F8F6;
   --color-dark-hairline: #333333;
-  --color-dark-accent: #142834;
+  --color-dark-accent: #E58C86;
 
   --font-serif: "Instrument Serif", serif;
   --font-sans: "Geist Sans", sans-serif;
@@ -29,15 +29,50 @@
 }
 
 @layer utilities {
-  .reveal {
+  .js .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
-  .reveal.active {
+  .js .reveal.active {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-accent: var(--color-dark-accent);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-dark-paper);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .js .reveal.active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.chinese-name {
+  font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", serif;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .chinese-name {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    justify-self: center;
+    align-self: start;
   }
 }
 
@@ -45,6 +80,21 @@
 .case-body > p + blockquote,
 .case-body > blockquote + p {
   margin-top: 1.5rem;
+}
+
+.case-body > blockquote {
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1rem;
+  color: var(--color-accent);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  .case-body > blockquote {
+    font-size: 1.75rem;
+  }
 }
 
 .synthesis strong {

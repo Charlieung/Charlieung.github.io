@@ -1,9 +1,10 @@
 ---
 headline: Charles Leung.
-emphasis: Engineering manager building AI products.
-trackRecord: Grew a team across data, machine learning, and product engineering at EvolutionIQ.
-pedigree: B.S. degrees in Chemical Engineering and Technical Writing from Carnegie Mellon.
-outcome: Delivered product modules across carriers and brought AI tools into the engineering manager group's work.
+chineseName: 梁韬略
+emphasis: Engineering manager shipping AI products for carriers.
+leadership: Founding data engineer turned manager, leading applied AI, data, and product engineering execution.
+delivery: Shipped 26 product modules across 6 workers' compensation carriers.
+impact: Cut data processing latency by 96% and review preparation from multiple days to 3 hours.
 ---
 
-I lead applied AI and data teams at EvolutionIQ. I grew the team across disciplines and work with product partners to decide what to build for carriers. I'm a player-coach: I help people own the work while staying close to the product and technical decisions that determine whether it ships.
+I lead applied AI and data teams at EvolutionIQ, where I joined as the founding data engineer and built the Workers' Compensation data and ML foundation from zero to production. I'm a player-coach: I give people ownership while staying close to the product and technical decisions that determine whether useful capabilities reach carriers.

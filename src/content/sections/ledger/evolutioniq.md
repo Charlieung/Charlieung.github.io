@@ -1,8 +1,10 @@
 ---
 label: I. EvolutionIQ
-title: Growing the team behind the product
+title: From founding engineer to product leader
 ---
 
-I joined EvolutionIQ as its founding data engineer, then grew the team across data, machine learning, and product engineering. As the scope expanded, my role shifted toward helping that team make decisions and deliver together, without stepping away from the product and technical work.
+> **26 product modules** shipped across **6 carriers**.
 
-With product partners, I set priorities across carrier needs and helped the team deliver modules for different workflows. As the team grew, I focused on giving engineers ownership of delivery while keeping those product priorities clear.
+I joined EvolutionIQ as its founding data engineer and built the Workers' Compensation data and ML infrastructure from zero to production. The platform and organization scaled through the company's $730M acquisition by CCC Intelligent Solutions, and I moved into engineering management as the product surface expanded.
+
+I now lead execution across applied AI, data, and product engineering. With product partners, I set priorities across carrier needs, give engineers ownership of delivery, and keep the path from sales conversation to production launch visible.

@@ -16,9 +16,10 @@ and section order in `src/pages/index.astro`; Markdown styling lives in
 `src/styles/global.css`.
 
 The original resume is stored at `public/Charles Leung - Engineering Manager Resume 2026.pdf`.
-The `/resume/` page renders that PDF with PDF.js and provides a direct download link. When
-replacing the PDF, keep the filename or update the URL in `src/pages/resume.astro`.
+The homepage opens the original PDF directly in the browser. `/resume/` redirects
+to the same PDF for existing bookmarks. When replacing the PDF, keep the filename
+or update the links in `src/pages/index.astro` and `src/pages/resume.astro`.
 Review the document for private details before publishing it.
 
-Requires Node.js 22.13 or newer. Run `npm ci`, then `npm run dev` to preview or
+Requires Node.js 22.12 or newer. Run `npm ci`, then `npm run dev` to preview or
 `npm run build` to create the static site.

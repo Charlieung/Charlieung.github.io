@@ -5,14 +5,15 @@ import { frontmatter as ledger } from '../content/sections/ledger.md';
 import { Content as EvolutionIQ, frontmatter as evolutionIQ } from '../content/sections/ledger/evolutioniq.md';
 import { Content as Inference, frontmatter as inference } from '../content/sections/ledger/inference.md';
 import { Content as Operations, frontmatter as operations } from '../content/sections/ledger/operations.md';
+import { Content as Leverage, frontmatter as leverage } from '../content/sections/ledger/leverage.md';
 import { Content as Synthesis, frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
 import { Content as Dispatch, frontmatter as dispatch } from '../content/sections/dispatch.md';
 ---
 
 <Layout title="Charles Leung | Engineering Manager, Applied AI & Product Delivery" description="Charles Leung leads applied AI and data teams building products for carriers. Engineering management, product delivery, and AI enablement at EvolutionIQ.">
-  <main class="py-12 md:py-24">
+  <main class="py-8 md:py-16">
     {/* Folio Header */}
-    <header class="reveal flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-16 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
+    <header class="reveal flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-8 md:mb-10 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
       <div class="flex flex-col gap-1">
         <span class="font-bold text-accent">Vol. IV — NYC</span>
         <span class="text-neutral-500">Edition</span>
@@ -28,60 +29,47 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
     </header>
 
     {/* Masthead & Opening Manifesto */}
-    <section class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-24 lg:mb-32">
-      <div class="md:col-span-8 lg:col-span-9 flex flex-col justify-center">
-        <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
-          {opening.headline}<br/>
-          <span class="text-accent italic">{opening.emphasis}</span>
-        </h1>
-        <div class="text-xl md:text-2xl font-medium max-w-3xl leading-snug"><Opening /></div>
-        <a href="/resume/" class="self-start mt-8 border border-hairline dark:border-dark-hairline px-4 py-2 font-mono text-sm hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">View resume</a>
+    <section class="reveal grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 mb-12 md:mb-16 lg:mb-20">
+      <div class="md:col-span-8 lg:col-span-9 grid gap-4 md:grid-cols-[2.5rem_minmax(0,1fr)] md:gap-6 content-start">
+        <span lang="zh-Hans" class="chinese-name text-accent text-2xl md:text-3xl">{opening.chineseName}</span>
+        <div class="flex min-w-0 flex-col justify-center">
+          <h1 class="font-serif leading-[0.95] mb-6">
+            <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">{opening.headline}</span>
+            <span class="block mt-4 text-accent italic text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl">{opening.emphasis}</span>
+          </h1>
+          <div class="text-base md:text-xl font-medium max-w-3xl leading-snug"><Opening /></div>
+          <a href="/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf" class="self-start mt-6 border border-hairline dark:border-dark-hairline px-4 py-2 font-mono text-sm hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">View resume (PDF)</a>
+        </div>
       </div>
 
       {/* Executive Proofline / Marginalia */}
-      <aside class="md:col-span-4 lg:col-span-3 border-l border-hairline dark:border-dark-hairline pl-6 md:pl-8 py-2 md:sticky md:top-8 md:self-start">
-        <div class="space-y-8 text-sm font-sans">
-
-          {/* Author Portrait */}
-          <div class="mb-8">
-            <figure class="relative grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
-              <img
-                src="/images/profile.jpg"
-                alt="Charles Leung Portrait"
-                class="w-full h-auto object-cover border border-hairline dark:border-dark-hairline"
-                loading="eager"
-              />
-              <figcaption class="mt-2 font-mono text-[0.65rem] text-neutral-500 uppercase tracking-widest text-right">
-                Fig 1. — The Author
-              </figcaption>
-            </figure>
-          </div>
-
-          <div>
-            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
-              Team
-            </h3>
-            <p class="leading-relaxed">
-              {opening.trackRecord}
-            </p>
-          </div>
-          <div class="h-px w-full bg-hairline dark:bg-dark-hairline"></div>
-          <div>
-            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2">Background</h3>
-            <p class="leading-relaxed">
-              {opening.pedigree}
-            </p>
-          </div>
-          <div class="h-px w-full bg-hairline dark:bg-dark-hairline"></div>
-          <div>
-            <h3 class="text-accent font-bold uppercase tracking-wider text-xs mb-2">Delivery</h3>
-            <p class="leading-relaxed">
-              {opening.outcome}
-            </p>
-          </div>
-        </div>
+      <aside class="order-3 md:order-none md:col-span-4 lg:col-span-3 border-l border-hairline dark:border-dark-hairline pl-6 md:pl-8 md:py-2 md:self-start">
+        <figure class="relative ml-auto max-w-40 grayscale transition-all duration-700 ease-in-out hover:grayscale-0 md:ml-0 md:max-w-none">
+          <img
+            src="/images/profile.jpg"
+            alt="Portrait of Charles Leung"
+            class="aspect-[4/5] w-full object-cover object-[center_30%] border border-hairline dark:border-dark-hairline md:aspect-auto"
+            loading="eager"
+          />
+          <figcaption class="mt-2 hidden text-right font-mono text-[0.65rem] uppercase tracking-widest text-neutral-500 md:block">
+            Fig 1. — The Author
+          </figcaption>
+        </figure>
       </aside>
+      <div class="order-2 grid grid-cols-1 gap-3 border-t border-hairline pt-5 font-sans text-sm dark:border-dark-hairline md:order-none md:col-span-12 md:grid-cols-3 md:gap-8">
+        <div class="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-3 md:block">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-accent md:mb-2">Leadership</h3>
+          <p class="leading-relaxed">{opening.leadership}</p>
+        </div>
+        <div class="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-3 md:block">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-accent md:mb-2">Delivery</h3>
+          <p class="leading-relaxed">{opening.delivery}</p>
+        </div>
+        <div class="grid grid-cols-[5.5rem_minmax(0,1fr)] gap-3 md:block">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-accent md:mb-2">Impact</h3>
+          <p class="leading-relaxed">{opening.impact}</p>
+        </div>
+      </div>
     </section>
 
     {/* Section 2: Architectural Deep Dives ("The Ledger") */}
@@ -126,6 +114,19 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
           </div>
           <div class="case-body md:col-span-8 lg:col-span-9 font-sans text-base md:text-lg leading-relaxed">
             <Operations />
+          </div>
+        </article>
+
+        <div class="w-full h-px bg-hairline dark:bg-dark-hairline"></div>
+
+        {/* Case Study 4 */}
+        <article class="reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group">
+          <div class="md:col-span-4 lg:col-span-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-accent mb-2 block">{leverage.label}</span>
+            <h3 class="font-serif text-3xl md:text-4xl leading-none mb-4 group-hover:text-accent transition-colors duration-300">{leverage.title}</h3>
+          </div>
+          <div class="case-body md:col-span-8 lg:col-span-9 font-sans text-base md:text-lg leading-relaxed">
+            <Leverage />
           </div>
         </article>
 
@@ -190,7 +191,7 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
           <a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
             GitHub
           </a>
-          <a href="/resume/" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">Resume</a>
+          <a href="/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">Resume (PDF)</a>
         </div>
       </div>
 
@@ -199,8 +200,7 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
           <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-4 border-b border-hairline dark:border-dark-hairline pb-2">Colophon</h3>
           <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
             <li><strong>Type:</strong> Instrument Serif, Geist Sans, JetBrains Mono</li>
-            <li><strong>Stack:</strong> Astro, Tailwind CSS, React</li>
-            <li><strong>Design:</strong> The Technical Magazine Spread</li>
+            <li><strong>Stack:</strong> Astro, Tailwind CSS</li>
             <li class="mt-4 pt-4 border-t border-hairline dark:border-dark-hairline">
               &copy; {new Date().getFullYear()} Charles Leung
             </li>
