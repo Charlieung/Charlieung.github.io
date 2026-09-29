@@ -5,6 +5,7 @@ import { frontmatter as ledger } from '../content/sections/ledger.md';
 import { Content as EvolutionIQ, frontmatter as evolutionIQ } from '../content/sections/ledger/evolutioniq.md';
 import { Content as Inference, frontmatter as inference } from '../content/sections/ledger/inference.md';
 import { Content as Operations, frontmatter as operations } from '../content/sections/ledger/operations.md';
+import { frontmatter as dispatch } from '../content/sections/dispatch.md';
 ---
 
 <Layout title="Charles Leung | Applied AI Engineering Leader" description="Charles Leung is a founding engineer turned engineering manager who leads applied AI products from technical foundation through enterprise delivery.">
@@ -100,6 +101,17 @@ import { Content as Operations, frontmatter as operations } from '../content/sec
 
       </div>
     </section>
+
+    <footer class="reveal grid grid-cols-1 gap-8 border-t-2 border-ink pb-20 pt-10 dark:border-dark-ink md:grid-cols-12 md:gap-12 md:pt-12">
+      <p class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Contact</p>
+      <div class="md:col-span-9">
+        <h2 class="font-serif text-4xl md:text-5xl">{dispatch.title}</h2>
+        <div class="mt-7 flex flex-wrap gap-3 font-mono text-sm">
+          <a href={dispatch.linkedin} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">LinkedIn</a>
+          <a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">GitHub</a>
+        </div>
+      </div>
+    </footer>
 
   </main>
 </Layout>

@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Content as CareerNote, frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
-import { Content as Dispatch, frontmatter as dispatch } from '../content/sections/dispatch.md';
 
 const pdfUrl = '/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf';
 ---
@@ -42,7 +41,7 @@ const pdfUrl = '/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf
 			</div>
 		</section>
 
-		<section class="reveal grid grid-cols-1 gap-8 py-10 md:grid-cols-12 md:gap-12 md:py-14">
+		<section class="reveal grid grid-cols-1 gap-8 pb-20 pt-10 md:grid-cols-12 md:gap-12 md:pt-14">
 			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Education</h2>
 			<div class="md:col-span-9">
 				<h3 class="font-serif text-3xl md:text-4xl">{mechanicalIndex.university}</h3>
@@ -51,19 +50,5 @@ const pdfUrl = '/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf
 				</div>
 			</div>
 		</section>
-
-		<footer class="reveal grid grid-cols-1 gap-8 border-t-2 border-ink pb-20 pt-10 dark:border-dark-ink md:grid-cols-12 md:gap-12 md:pt-12">
-			<div class="md:col-span-3">
-				<p class="font-mono text-xs uppercase tracking-widest text-accent">Contact</p>
-			</div>
-			<div class="md:col-span-9">
-				<h2 class="font-serif text-4xl md:text-5xl">{dispatch.title}</h2>
-				<div class="mt-4 max-w-2xl text-lg leading-relaxed md:text-xl"><Dispatch /></div>
-				<div class="mt-7 flex flex-wrap gap-3 font-mono text-sm">
-					<a href={dispatch.linkedin} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">LinkedIn</a>
-					<a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">GitHub</a>
-				</div>
-			</div>
-		</footer>
 	</main>
 </Layout>
