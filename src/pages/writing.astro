@@ -19,9 +19,10 @@ const recentPosts = posts.filter((post) => post !== featuredPost);
 <Layout title="Writing | Charles Leung" description="Writing by Charles Leung on applied AI, data systems, product delivery, and engineering leadership.">
   <main class="py-10 md:py-16">
     <header class="reveal border-b-2 border-ink pb-8 dark:border-dark-ink md:pb-12">
-      <div class="mb-5 flex items-center justify-between font-mono text-xs uppercase tracking-widest text-neutral-500">
+      <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-widest">
         <span class="text-accent">Field notes</span>
-        <span>Applied AI & systems</span>
+        <span aria-hidden="true" class="text-hairline dark:text-dark-hairline">/</span>
+        <span lang="zh-Hant" class="text-neutral-500">札記</span>
       </div>
       <h1 class="font-serif text-7xl leading-none sm:text-8xl md:text-9xl">Writing.</h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-xl">{writing.subtitle}. Essays about the technical and organizational decisions behind enterprise software.</p>

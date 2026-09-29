@@ -5,8 +5,6 @@ import { frontmatter as ledger } from '../content/sections/ledger.md';
 import { Content as EvolutionIQ, frontmatter as evolutionIQ } from '../content/sections/ledger/evolutioniq.md';
 import { Content as Inference, frontmatter as inference } from '../content/sections/ledger/inference.md';
 import { Content as Operations, frontmatter as operations } from '../content/sections/ledger/operations.md';
-import { Content as Synthesis, frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
-import { Content as Dispatch, frontmatter as dispatch } from '../content/sections/dispatch.md';
 ---
 
 <Layout title="Charles Leung | Applied AI Engineering Leader" description="Charles Leung is a founding engineer turned engineering manager who leads applied AI products from technical foundation through enterprise delivery.">
@@ -102,82 +100,6 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
 
       </div>
     </section>
-
-    {/* Section 3: The Mechanical Index (Chronology & Pedigree) */}
-    <section class="reveal mb-24 lg:mb-32">
-      <div class="flex items-baseline gap-4 mb-12 border-b-2 border-ink dark:border-dark-ink pb-4">
-        <h2 class="font-serif text-4xl md:text-5xl">{mechanicalIndex.title}</h2>
-        <span class="font-mono text-sm text-neutral-500 hidden md:inline-block">{mechanicalIndex.subtitle}</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-        {/* Career Chronology */}
-        <div>
-          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-8 border-b border-hairline dark:border-dark-hairline pb-2">Professional Experience</h3>
-          <ul class="space-y-6 font-sans text-sm md:text-base">
-            {mechanicalIndex.experience.map((job: { company: string; role: string; dates: string }) => (
-              <li class="flex justify-between items-baseline gap-4 border-b border-hairline/30 dark:border-dark-hairline/30 pb-2 last:border-0">
-                <div>
-                  <strong class="block">{job.company}</strong>
-                  <span class="text-neutral-600 dark:text-neutral-400">{job.role}</span>
-                </div>
-                <span class="font-mono text-xs text-neutral-500 text-right shrink-0">{job.dates}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Education & Pedigree */}
-        <div>
-          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-8 border-b border-hairline dark:border-dark-hairline pb-2">Academic Foundation</h3>
-          <div class="space-y-6 font-sans text-sm md:text-base">
-            <div>
-              <strong class="block text-lg mb-1">{mechanicalIndex.university}</strong>
-              <div class="space-y-1 text-neutral-600 dark:text-neutral-400">
-                {mechanicalIndex.degrees.map((degree: string) => <p>{degree}</p>)}
-              </div>
-            </div>
-
-            <div class="mt-8 border-t border-hairline pt-5 dark:border-dark-hairline">
-              <div class="synthesis max-w-lg text-sm leading-relaxed text-neutral-600 dark:text-neutral-300"><Synthesis /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Section 4: Colophon & Dispatch */}
-    <footer class="reveal border-t-2 border-ink dark:border-dark-ink pt-12 pb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
-      <div class="md:col-span-8 lg:col-span-9">
-        <h2 class="font-serif text-3xl md:text-5xl mb-6">{dispatch.title}</h2>
-        <div class="font-sans text-lg md:text-xl max-w-2xl mb-8"><Dispatch /></div>
-        <div class="flex flex-wrap gap-4 font-mono text-sm">
-          <a href={`mailto:${dispatch.email}`} class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
-            {dispatch.email}
-          </a>
-          <a href={dispatch.linkedin} target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
-            LinkedIn
-          </a>
-          <a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
-            GitHub
-          </a>
-          <a href="/resume/" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">Resume</a>
-        </div>
-      </div>
-
-      <div class="md:col-span-4 lg:col-span-3 text-sm font-sans flex flex-col justify-end mt-12 md:mt-0">
-        <div class="bg-neutral-100 dark:bg-neutral-900 p-6">
-          <h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-4 border-b border-hairline dark:border-dark-hairline pb-2">Colophon</h3>
-          <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
-            <li><strong>Type:</strong> Instrument Serif, Geist Sans, JetBrains Mono</li>
-            <li><strong>Stack:</strong> Astro, Tailwind CSS</li>
-            <li class="mt-4 pt-4 border-t border-hairline dark:border-dark-hairline">
-              &copy; {new Date().getFullYear()} Charles Leung
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
 
   </main>
 </Layout>

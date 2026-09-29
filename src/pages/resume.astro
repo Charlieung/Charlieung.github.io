@@ -1,49 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Content as Opening, frontmatter as opening } from '../content/sections/opening.md';
-import { frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
+import { Content as CareerNote, frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
+import { Content as Dispatch, frontmatter as dispatch } from '../content/sections/dispatch.md';
 
 const pdfUrl = '/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf';
-
-const outcomes = [
-	'Built two insurance product verticals from zero to production through EvolutionIQ’s $730M acquisition.',
-	'Led delivery of 30+ product modules for more than 10 insurance carriers.',
-	'Created shared paths for production inference, streaming, and repeatable customer launches.'
-];
 ---
 
 <Layout title="Resume | Charles Leung" description="Resume of Charles Leung, an applied AI engineering leader based in New York.">
 	<main class="py-10 md:py-16">
-		<header class="reveal grid grid-cols-1 gap-10 border-b-2 border-ink pb-12 dark:border-dark-ink md:grid-cols-12 md:gap-12">
-			<div class="md:col-span-8 lg:col-span-9">
-				<p class="mb-5 font-mono text-xs uppercase tracking-widest text-accent">Resume / 2026</p>
-				<h1 class="font-serif text-7xl leading-none sm:text-8xl md:text-9xl">Charles Leung.</h1>
-				<p class="mt-5 max-w-3xl font-serif text-3xl italic leading-tight text-accent md:text-5xl">{opening.emphasis}</p>
+		<header class="reveal grid grid-cols-1 gap-8 border-b-2 border-ink pb-10 dark:border-dark-ink md:grid-cols-12 md:items-end md:gap-12 md:pb-12">
+			<div class="md:col-span-8">
+				<div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-widest">
+					<span class="text-accent">Resume</span>
+					<span aria-hidden="true" class="text-hairline dark:text-dark-hairline">/</span>
+					<span lang="zh-Hant" class="text-neutral-500">履歷</span>
+				</div>
+				<h1 class="font-serif text-7xl leading-none sm:text-8xl md:text-9xl">Resume</h1>
 			</div>
-			<div class="flex flex-col items-start justify-end gap-4 md:col-span-4 lg:col-span-3">
-				<p class="font-mono text-xs uppercase tracking-widest text-neutral-500">New York, NY</p>
-				<a href={pdfUrl} class="border border-ink px-4 py-3 font-mono text-sm hover:bg-ink hover:text-paper dark:border-dark-ink dark:hover:bg-dark-ink dark:hover:text-dark-paper">Open resume PDF ↗</a>
+			<div class="flex items-end md:col-span-4 md:justify-end">
+				<a href={pdfUrl} class="border border-ink px-4 py-3 font-mono text-sm transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-ink dark:hover:bg-dark-ink dark:hover:text-dark-paper">Open PDF ↗</a>
 			</div>
 		</header>
 
-		<section class="reveal grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
-			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Profile</h2>
-			<div class="max-w-3xl text-lg leading-relaxed md:col-span-9 md:text-xl"><Opening /></div>
+		<section class="reveal grid grid-cols-1 gap-4 border-b border-hairline py-8 dark:border-dark-hairline md:grid-cols-12 md:gap-12 md:py-10">
+			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Notes</h2>
+			<div class="max-w-3xl text-lg leading-relaxed md:col-span-9 md:text-xl"><CareerNote /></div>
 		</section>
 
-		<section class="reveal grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
-			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Selected outcomes</h2>
-			<ol class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
-				{outcomes.map((outcome, index) => (
-					<li class="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 first:pt-0 last:pb-0">
-						<span class="font-mono text-xs text-neutral-500">{String(index + 1).padStart(2, '0')}</span>
-						<span class="font-serif text-2xl leading-tight md:text-3xl">{outcome}</span>
-					</li>
-				))}
-			</ol>
-		</section>
-
-		<section class="reveal grid grid-cols-1 gap-10 py-12 md:grid-cols-12 md:gap-12">
+		<section class="reveal grid grid-cols-1 gap-8 border-b border-hairline py-10 dark:border-dark-hairline md:grid-cols-12 md:gap-12 md:py-14">
 			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Experience</h2>
 			<div class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
 				{mechanicalIndex.experience.map((job: { company: string; role: string; dates: string }) => (
@@ -58,12 +42,29 @@ const outcomes = [
 			</div>
 		</section>
 
-		<footer class="reveal flex flex-col gap-5 border-t-2 border-ink py-10 dark:border-dark-ink sm:flex-row sm:items-center sm:justify-between">
-			<div>
-				<strong class="font-serif text-2xl">{mechanicalIndex.university}</strong>
-				<p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">{mechanicalIndex.degrees.join(' / ')}</p>
+		<section class="reveal grid grid-cols-1 gap-8 py-10 md:grid-cols-12 md:gap-12 md:py-14">
+			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Education</h2>
+			<div class="md:col-span-9">
+				<h3 class="font-serif text-3xl md:text-4xl">{mechanicalIndex.university}</h3>
+				<div class="mt-3 space-y-1 text-neutral-600 dark:text-neutral-300">
+					{mechanicalIndex.degrees.map((degree: string) => <p>{degree}</p>)}
+				</div>
 			</div>
-			<a href={pdfUrl} class="self-start font-mono text-sm text-accent hover:underline sm:self-auto">Download the full PDF ↗</a>
+		</section>
+
+		<footer class="reveal grid grid-cols-1 gap-8 border-t-2 border-ink pb-20 pt-10 dark:border-dark-ink md:grid-cols-12 md:gap-12 md:pt-12">
+			<div class="md:col-span-3">
+				<p class="font-mono text-xs uppercase tracking-widest text-accent">Contact / 聯絡</p>
+			</div>
+			<div class="md:col-span-9">
+				<h2 class="font-serif text-4xl md:text-5xl">{dispatch.title}</h2>
+				<div class="mt-4 max-w-2xl text-lg leading-relaxed md:text-xl"><Dispatch /></div>
+				<div class="mt-7 flex flex-wrap gap-3 font-mono text-sm">
+					<a href={`mailto:${dispatch.email}`} class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">{dispatch.email}</a>
+					<a href={dispatch.linkedin} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">LinkedIn</a>
+					<a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline px-4 py-2 transition-colors duration-200 hover:bg-ink hover:text-paper dark:border-dark-hairline dark:hover:bg-dark-ink dark:hover:text-dark-paper">GitHub</a>
+				</div>
+			</div>
 		</footer>
 	</main>
 </Layout>
