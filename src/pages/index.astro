@@ -181,28 +181,3 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
 
   </main>
 </Layout>
-
-<script>
-  // Simple Intersection Observer to trigger reveal animations
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        // Stop observing once revealed
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Apply to all elements with the reveal class
-  document.addEventListener('DOMContentLoaded', () => {
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
-  });
-</script>

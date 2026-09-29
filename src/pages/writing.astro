@@ -18,7 +18,7 @@ const recentPosts = posts.filter((post) => post !== featuredPost);
 
 <Layout title="Writing | Charles Leung" description="Writing by Charles Leung on applied AI, data systems, product delivery, and engineering leadership.">
   <main class="py-10 md:py-16">
-    <header class="border-b-2 border-ink pb-8 dark:border-dark-ink md:pb-12">
+    <header class="reveal border-b-2 border-ink pb-8 dark:border-dark-ink md:pb-12">
       <div class="mb-5 flex items-center justify-between font-mono text-xs uppercase tracking-widest text-neutral-500">
         <span class="text-accent">Field notes</span>
         <span>Applied AI & systems</span>
@@ -27,7 +27,7 @@ const recentPosts = posts.filter((post) => post !== featuredPost);
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-xl">{writing.subtitle}. Essays about the technical and organizational decisions behind enterprise software.</p>
     </header>
 
-    <section class="grid grid-cols-1 gap-12 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12 md:py-16">
+    <section class="reveal grid grid-cols-1 gap-12 pb-8 pt-12 md:grid-cols-12 md:gap-12 md:pb-10 md:pt-16">
       <div class="md:col-span-3">
         <p class="font-mono text-xs uppercase tracking-widest text-accent">Featured essay</p>
       </div>
@@ -44,18 +44,18 @@ const recentPosts = posts.filter((post) => post !== featuredPost);
       </article>
     </section>
 
-    <section class="py-12 md:py-16">
-      <div class="mb-8 flex items-baseline justify-between border-b-2 border-ink pb-4 dark:border-dark-ink">
-        <h2 class="font-serif text-4xl md:text-5xl">Archive</h2>
+    <section class="reveal pb-8 pt-2 md:pb-10 md:pt-4">
+      <div class="mb-4 flex items-baseline justify-between border-b border-hairline pb-3 dark:border-dark-hairline">
+        <h2 class="font-mono text-xs uppercase tracking-widest text-accent">Archive</h2>
         {writing.publicationUrl && (
           <a href={writing.publicationUrl} target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-widest text-accent hover:underline">Substack ↗</a>
         )}
       </div>
       <div class="divide-y divide-hairline dark:divide-dark-hairline">
         {recentPosts.map((post, index) => (
-          <article class="grid grid-cols-1 gap-4 py-8 md:grid-cols-12 md:gap-8">
+          <article class="reveal grid grid-cols-1 gap-4 py-6 md:grid-cols-12 md:gap-8">
             <div class="font-mono text-xs uppercase tracking-widest text-neutral-500 md:col-span-2">{String(index + 1).padStart(2, '0')} / {post.date}</div>
-            <h3 class="font-serif text-3xl leading-tight md:col-span-5 md:text-4xl">{post.title}</h3>
+            <h3 class="font-serif text-2xl leading-tight md:col-span-5 md:text-3xl">{post.title}</h3>
             <div class="md:col-span-4">
               <p class="text-base leading-relaxed text-neutral-600 dark:text-neutral-300">{post.excerpt}</p>
               <p class="mt-3 font-mono text-xs uppercase tracking-widest text-neutral-500">{post.readingTime}</p>

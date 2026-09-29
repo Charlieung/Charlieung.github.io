@@ -14,7 +14,7 @@ const outcomes = [
 
 <Layout title="Resume | Charles Leung" description="Resume of Charles Leung, an applied AI engineering leader based in New York.">
 	<main class="py-10 md:py-16">
-		<header class="grid grid-cols-1 gap-10 border-b-2 border-ink pb-12 dark:border-dark-ink md:grid-cols-12 md:gap-12">
+		<header class="reveal grid grid-cols-1 gap-10 border-b-2 border-ink pb-12 dark:border-dark-ink md:grid-cols-12 md:gap-12">
 			<div class="md:col-span-8 lg:col-span-9">
 				<p class="mb-5 font-mono text-xs uppercase tracking-widest text-accent">Resume / 2026</p>
 				<h1 class="font-serif text-7xl leading-none sm:text-8xl md:text-9xl">Charles Leung.</h1>
@@ -26,12 +26,12 @@ const outcomes = [
 			</div>
 		</header>
 
-		<section class="grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
+		<section class="reveal grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
 			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Profile</h2>
 			<div class="max-w-3xl text-lg leading-relaxed md:col-span-9 md:text-xl"><Opening /></div>
 		</section>
 
-		<section class="grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
+		<section class="reveal grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
 			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Selected outcomes</h2>
 			<ol class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
 				{outcomes.map((outcome, index) => (
@@ -43,7 +43,7 @@ const outcomes = [
 			</ol>
 		</section>
 
-		<section class="grid grid-cols-1 gap-10 py-12 md:grid-cols-12 md:gap-12">
+		<section class="reveal grid grid-cols-1 gap-10 py-12 md:grid-cols-12 md:gap-12">
 			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Experience</h2>
 			<div class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
 				{mechanicalIndex.experience.map((job: { company: string; role: string; dates: string }) => (
@@ -58,7 +58,7 @@ const outcomes = [
 			</div>
 		</section>
 
-		<footer class="flex flex-col gap-5 border-t-2 border-ink py-10 dark:border-dark-ink sm:flex-row sm:items-center sm:justify-between">
+		<footer class="reveal flex flex-col gap-5 border-t-2 border-ink py-10 dark:border-dark-ink sm:flex-row sm:items-center sm:justify-between">
 			<div>
 				<strong class="font-serif text-2xl">{mechanicalIndex.university}</strong>
 				<p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">{mechanicalIndex.degrees.join(' / ')}</p>
