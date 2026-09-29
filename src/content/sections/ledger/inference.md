@@ -1,10 +1,12 @@
 ---
-label: II. Inference
-title: Making AI viable for carrier workflows
+label: II. Organizational Scale
+title: Scaling technical solutions across teams
 ---
 
-> Matched commercial-model benchmarks while reducing tail latency and token spend.
+> Scaling local solutions with a production platform
 
-Claim extraction needed to work at carrier scale, with acceptable quality, cost, latency, and data handling. Rather than assume a larger commercial model was the right answer, I led the team through the trade-offs of bringing inference in-house.
+Claim extraction was constrained by the cost, latency, and data-handling trade-offs of our existing inference approach. I identified an opportunity to use smaller, workload-specific models, then partnered with platform engineering to turn local experiments into production self-hosted inference. The serving pattern expanded beyond my product area.
 
-We tested quantized Gemma and other local models against commercial-model benchmarks, then worked with platform engineering to self-host inference in production. It kept carrier data in-house, reduced tail latency and token expenditure, and gave the team more control over serving. The point was not the model; it was making extraction viable as a product capability.
+I took the same approach to a cross-team streaming bottleneck. Rather than require teams to replace their batch-oriented systems all at once, I helped shape an incremental path with RisingWave and worked with partner engineers on an end-to-end demonstration.
+
+In both cases, the leverage came from meeting teams where they were and creating a practical route to the next architecture. The result was reusable technical direction that helped teams move toward self-hosted inference and streaming across the organization.

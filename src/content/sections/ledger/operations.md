@@ -1,10 +1,12 @@
 ---
 label: III. Operations
-title: Turning evaluation into a release decision
+title: Creating a repeatable product onboarding and launch process
 ---
 
-> One delivery process from initial sales call to carrier go-live.
+> Led delivery of **30+ product modules** for **more than 10 insurance carriers**
 
-For document extraction, a working demo was not enough. Product and engineering needed a shared way to decide whether a model was ready for a carrier workflow. I brought those teams together around evaluation criteria, human review, and release gates.
+As the product portfolio expanded, each deployment became exponentially more complex, while needing to move through the same lead time and path to production readiness.
 
-I connected that technical evidence to the wider deployment process, from the first sales conversation through Jira timelines, Fix Versions, Solutions and QA review, and go-live. This gave teams a shared view of readiness and made launch timelines more predictable. The measure of progress was not how many experiments we ran, but whether the right capabilities reached carriers reliably.
+I created a repeatable onboarding and launch process connecting Product, Engineering, Solutions, QA, and Customer Success. Technical evaluation, human review, customer-journey validation, and release ownership became shared evidence for deciding when a capability was ready.
+
+That system supported delivery of more than 30 product modules for over 10 insurance carriers, including four launches and expansions in the last half year.

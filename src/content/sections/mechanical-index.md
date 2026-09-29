@@ -23,4 +23,4 @@ degrees:
   - B.S. Technical Writing
 ---
 
-Chemical engineering taught me to think in terms of process controls and failure modes. Technical writing taught me to explain those systems clearly. I use both when building software and leading teams.
+I began my career in process engineering, working with systems that turned scrap cars into welded pipe for Alaska. From there, I moved into high-frequency financial systems before finding my way to applied AI.

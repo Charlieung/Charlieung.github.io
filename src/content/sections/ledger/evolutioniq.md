@@ -1,10 +1,10 @@
 ---
 label: I. EvolutionIQ
-title: From founding engineer to product leader
+title: Building from 0 to 1 through a $730M acquisition
 ---
 
-> **26 product modules** shipped across **6 carriers**.
+> From Tech Lead to Engineering Leadership
 
-I joined EvolutionIQ as its founding data engineer and built the Workers' Compensation data and ML infrastructure from zero to production. The platform and organization scaled through the company's $730M acquisition by CCC Intelligent Solutions, and I moved into engineering management as the product surface expanded.
+I first helped build EvolutionIQ's Disability product from zero to production, spanning short- and long-term disability. I then led Workers Compensation from **0 to 1** and built the entire data and machine learning stack from the ground up.
 
-I now lead execution across applied AI, data, and product engineering. With product partners, I set priorities across carrier needs, give engineers ownership of delivery, and keep the path from sales conversation to production launch visible.
+As the products, teams, and customer base grew, I moved into engineering leadership while staying close to the technical and product decisions behind delivery. That progression carried through EvolutionIQ's $730M acquisition by CCC Intelligent Solutions.

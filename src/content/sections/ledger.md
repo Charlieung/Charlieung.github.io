@@ -1,4 +1,4 @@
 ---
 title: Selected work
-subtitle: Leadership decisions and measurable outcomes
+subtitle: Enterprise delivery, organizational scale, and applied AI
 ---

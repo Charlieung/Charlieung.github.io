@@ -1,10 +1,10 @@
 ---
-headline: Charles Leung.
+headline: Charles Leung
 chineseName: 梁韬略
-emphasis: Engineering manager shipping AI products for carriers.
-leadership: Founding data engineer turned manager, leading applied AI, data, and product engineering execution.
-delivery: Shipped 26 product modules across 6 workers' compensation carriers.
-impact: Cut data processing latency by 96% and review preparation from multiple days to 3 hours.
+emphasis: Engineering leader turning applied AI into enterprise products
+leadership: Managed product teams across Applied AI, Machine Learning, Data Engineering, and Web Applications
+delivery: Established delivery processes with product and engagement managers that scaled across carriers, growing the Workers Compensation team
+impact: Converted multiple carriers into production clients with live AI products and expanded our group's product portfolio
 ---
 
-I lead applied AI and data teams at EvolutionIQ, where I joined as the founding data engineer and built the Workers' Compensation data and ML foundation from zero to production. I'm a player-coach: I give people ownership while staying close to the product and technical decisions that determine whether useful capabilities reach carriers.
+I joined EvolutionIQ as one of the founding data engineers to help productionize our first client and help the team scale across the insurance industry. Today, I lead teams that take AI products from data infrastructure and model evaluation through customer-facing applications and production delivery.
