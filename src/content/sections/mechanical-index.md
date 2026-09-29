@@ -23,4 +23,4 @@ degrees:
   - B.S. Technical Writing
 ---
 
-I began my career in process engineering, working with systems that turned scrap cars into welded pipe for Alaska. From there, I moved into high-frequency financial systems before finding my way to applied AI.
+I began my career in process engineering, working with systems that turned scrap cars into welded pipe for Alaska. I learned to communicate to management, and get buy-in on the shop floor. From there, I moved into high-frequency financial systems before finding my way to applied AI software.
