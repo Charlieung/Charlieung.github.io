@@ -7,6 +7,14 @@ interface Props {
 }
 
 const { title, description = "Personal Engineering Publication & Architecture Portfolio of Charles Leung" } = Astro.props;
+
+const navigation = [
+  { href: '/', label: 'Home' },
+  { href: '/writing/', label: 'Writing' },
+  { href: '/resume/', label: 'Resume' }
+];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -22,6 +30,35 @@ const { title, description = "Personal Engineering Publication & Architecture Po
   </head>
   <body class="min-h-screen bg-paper text-ink dark:bg-dark-paper dark:text-dark-ink font-sans selection:bg-accent selection:text-white antialiased transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-hairline dark:border-dark-hairline min-h-screen relative shadow-[0_0_40px_rgba(0,0,0,0.03)]">
+      <header class="flex items-start justify-between border-b-2 border-hairline pb-4 pt-8 font-mono text-[0.65rem] uppercase tracking-widest dark:border-dark-hairline md:pt-10 md:text-xs">
+        <div class="flex flex-col gap-1">
+          <span class="font-bold text-accent">Charles L.</span>
+          <span class="text-neutral-500">姓名</span>
+        </div>
+        <div class="hidden flex-col gap-1 text-right sm:flex">
+          <span class="font-bold">New York, NY</span>
+          <span class="text-neutral-500">現居</span>
+        </div>
+        <nav aria-label="Primary navigation">
+          <div class="flex items-center gap-4 md:gap-8">
+            {navigation.map((item) => {
+              const isCurrent = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
+              return (
+                <a
+                  href={item.href}
+                  aria-current={isCurrent ? 'page' : undefined}
+                  class:list={[
+                    'border-b pb-1 transition-colors duration-200 hover:text-accent',
+                    isCurrent ? 'border-accent text-accent' : 'border-transparent text-neutral-500 dark:text-neutral-400'
+                  ]}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </div>
+        </nav>
+      </header>
       <slot />
     </div>
   </body>

@@ -1,6 +1,6 @@
 ---
 headline: Charles Leung
-chineseName: 梁韬略
+chineseName: 梁韜略
 emphasis: Engineering leader turning applied AI into enterprise products
 leadership: Managed product teams across Applied AI, Machine Learning, Data Engineering, and Web Applications
 delivery: Established delivery processes with product and engagement managers that scaled across carriers, growing the Workers Compensation team

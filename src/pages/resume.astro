@@ -1,3 +1,69 @@
 ---
-return Astro.redirect('/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf');
+import Layout from '../layouts/Layout.astro';
+import { Content as Opening, frontmatter as opening } from '../content/sections/opening.md';
+import { frontmatter as mechanicalIndex } from '../content/sections/mechanical-index.md';
+
+const pdfUrl = '/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf';
+
+const outcomes = [
+	'Built two insurance product verticals from zero to production through EvolutionIQ’s $730M acquisition.',
+	'Led delivery of 30+ product modules for more than 10 insurance carriers.',
+	'Created shared paths for production inference, streaming, and repeatable customer launches.'
+];
 ---
+
+<Layout title="Resume | Charles Leung" description="Resume of Charles Leung, an applied AI engineering leader based in New York.">
+	<main class="py-10 md:py-16">
+		<header class="grid grid-cols-1 gap-10 border-b-2 border-ink pb-12 dark:border-dark-ink md:grid-cols-12 md:gap-12">
+			<div class="md:col-span-8 lg:col-span-9">
+				<p class="mb-5 font-mono text-xs uppercase tracking-widest text-accent">Resume / 2026</p>
+				<h1 class="font-serif text-7xl leading-none sm:text-8xl md:text-9xl">Charles Leung.</h1>
+				<p class="mt-5 max-w-3xl font-serif text-3xl italic leading-tight text-accent md:text-5xl">{opening.emphasis}</p>
+			</div>
+			<div class="flex flex-col items-start justify-end gap-4 md:col-span-4 lg:col-span-3">
+				<p class="font-mono text-xs uppercase tracking-widest text-neutral-500">New York, NY</p>
+				<a href={pdfUrl} class="border border-ink px-4 py-3 font-mono text-sm hover:bg-ink hover:text-paper dark:border-dark-ink dark:hover:bg-dark-ink dark:hover:text-dark-paper">Open resume PDF ↗</a>
+			</div>
+		</header>
+
+		<section class="grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
+			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Profile</h2>
+			<div class="max-w-3xl text-lg leading-relaxed md:col-span-9 md:text-xl"><Opening /></div>
+		</section>
+
+		<section class="grid grid-cols-1 gap-10 border-b border-hairline py-12 dark:border-dark-hairline md:grid-cols-12 md:gap-12">
+			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Selected outcomes</h2>
+			<ol class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
+				{outcomes.map((outcome, index) => (
+					<li class="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-4 py-5 first:pt-0 last:pb-0">
+						<span class="font-mono text-xs text-neutral-500">{String(index + 1).padStart(2, '0')}</span>
+						<span class="font-serif text-2xl leading-tight md:text-3xl">{outcome}</span>
+					</li>
+				))}
+			</ol>
+		</section>
+
+		<section class="grid grid-cols-1 gap-10 py-12 md:grid-cols-12 md:gap-12">
+			<h2 class="font-mono text-xs uppercase tracking-widest text-accent md:col-span-3">Experience</h2>
+			<div class="divide-y divide-hairline dark:divide-dark-hairline md:col-span-9">
+				{mechanicalIndex.experience.map((job: { company: string; role: string; dates: string }) => (
+					<article class="grid grid-cols-1 gap-2 py-6 first:pt-0 md:grid-cols-[minmax(0,1fr)_auto] md:gap-8">
+						<div>
+							<h3 class="font-serif text-3xl">{job.company}</h3>
+							<p class="mt-1 text-neutral-600 dark:text-neutral-300">{job.role}</p>
+						</div>
+						<p class="font-mono text-xs text-neutral-500 md:pt-2">{job.dates}</p>
+					</article>
+				))}
+			</div>
+		</section>
+
+		<footer class="flex flex-col gap-5 border-t-2 border-ink py-10 dark:border-dark-ink sm:flex-row sm:items-center sm:justify-between">
+			<div>
+				<strong class="font-serif text-2xl">{mechanicalIndex.university}</strong>
+				<p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">{mechanicalIndex.degrees.join(' / ')}</p>
+			</div>
+			<a href={pdfUrl} class="self-start font-mono text-sm text-accent hover:underline sm:self-auto">Download the full PDF ↗</a>
+		</footer>
+	</main>
+</Layout>

@@ -11,33 +11,17 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
 
 <Layout title="Charles Leung | Applied AI Engineering Leader" description="Charles Leung is a founding engineer turned engineering manager who leads applied AI products from technical foundation through enterprise delivery.">
   <main class="py-8 md:py-16">
-    {/* Folio Header */}
-    <header class="reveal flex justify-between items-end border-b-2 border-hairline dark:border-dark-hairline pb-4 mb-8 md:mb-10 uppercase tracking-widest text-[0.65rem] md:text-xs font-mono">
-      <div class="flex flex-col gap-1">
-        <span class="font-bold text-accent">Vol. IV — NYC</span>
-        <span class="text-neutral-500">Edition</span>
-      </div>
-      <div class="flex flex-col gap-1 text-right">
-        <span class="font-bold">New York, NY</span>
-        <span class="text-neutral-500">Location</span>
-      </div>
-      <div class="hidden md:flex flex-col gap-1 text-right">
-        <span class="font-bold">Enterprise Delivery, Applied AI, Team Leadership</span>
-        <span class="text-neutral-500">Focus</span>
-      </div>
-    </header>
-
     {/* Masthead & Opening Manifesto */}
     <section class="reveal grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 mb-12 md:mb-16 lg:mb-20">
       <div class="md:col-span-8 lg:col-span-9 grid gap-4 md:grid-cols-[2.5rem_minmax(0,1fr)] md:gap-6 content-start">
-        <span lang="zh-Hans" class="chinese-name text-accent text-2xl md:text-3xl">{opening.chineseName}</span>
+        <span lang="zh-Hant" class="chinese-name text-accent text-2xl md:text-3xl">{opening.chineseName}</span>
         <div class="flex min-w-0 flex-col justify-center">
           <h1 class="font-serif leading-[0.95] mb-6">
             <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">{opening.headline}</span>
             <span class="block mt-4 text-accent italic text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl">{opening.emphasis}</span>
           </h1>
           <div class="text-base md:text-xl font-medium max-w-3xl leading-snug"><Opening /></div>
-          <a href="/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf" class="self-start mt-6 border border-hairline dark:border-dark-hairline px-4 py-2 font-mono text-sm hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">View resume (PDF)</a>
+          <a href="/resume/" class="self-start mt-6 border border-hairline dark:border-dark-hairline px-4 py-2 font-mono text-sm hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">View resume</a>
         </div>
       </div>
 
@@ -177,7 +161,7 @@ import { Content as Dispatch, frontmatter as dispatch } from '../content/section
           <a href={dispatch.github} target="_blank" rel="noopener noreferrer" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">
             GitHub
           </a>
-          <a href="/Charles%20Leung%20-%20Engineering%20Manager%20Resume%202026.pdf" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">Resume (PDF)</a>
+          <a href="/resume/" class="border border-hairline dark:border-dark-hairline px-4 py-2 hover:bg-ink hover:text-paper dark:hover:bg-dark-ink dark:hover:text-dark-paper transition-colors duration-200">Resume</a>
         </div>
       </div>
 
